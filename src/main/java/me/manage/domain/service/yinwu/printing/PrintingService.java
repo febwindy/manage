@@ -50,8 +50,8 @@ public class PrintingService implements IPrintingService {
             criterionList.add(Restrictions.like("type", command.getType(), MatchMode.ANYWHERE));
         }
 
-        if (null != command.getInk() && !StringUtils.isEmpty(command.getInk())) {
-            criterionList.add(Restrictions.like("ink", command.getInk(), MatchMode.ANYWHERE));
+        if (null != command.getIsbn() && !StringUtils.isEmpty(command.getIsbn())) {
+            criterionList.add(Restrictions.like("isbn", command.getIsbn(), MatchMode.ANYWHERE));
         }
 
         Criterion[] restrictions = null;
@@ -70,6 +70,7 @@ public class PrintingService implements IPrintingService {
 
         Printing printing = new Printing();
         printing.setName(command.getName());
+        printing.setIsbn(command.getIsbn());
         printing.setType(command.getType());
         printing.setPaper(command.getPaper());
         printing.setPaperType(command.getPaperType());
@@ -87,6 +88,7 @@ public class PrintingService implements IPrintingService {
 
         Printing printing = this.findById(command.getId());
         printing.setName(command.getName());
+        printing.setIsbn(command.getIsbn());
         printing.setType(command.getType());
         printing.setPaper(command.getPaper());
         printing.setPaperType(command.getPaperType());

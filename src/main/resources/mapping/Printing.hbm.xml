@@ -10,6 +10,7 @@
         </id>
 
         <property name="name" column="name"/>
+        <property name="isbn" column="isbn"/>
         <property name="type" column="type"/>
         <property name="paper" column="paper"/>
         <property name="paperType" column="paper_type"/>

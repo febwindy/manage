@@ -6,6 +6,7 @@ package me.manage.interfaces.yinwu.printing.command;
 public class EditPrintingCommand {
     private String id;
     private String name;
+    private String isbn;
     private String type;
     private String paper;
     private String paperType;
@@ -28,6 +29,14 @@ public class EditPrintingCommand {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getType() {

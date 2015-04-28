@@ -30,6 +30,14 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="isbn" class="col-sm-2 control-label">ISBN:</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="isbn" class="form-control" placeholder="ISBN" required="true"
+                               value="${printing.isbn}"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
                     <label for="type" class="col-sm-2 control-label">印刷类型:</label>
                     <div class="col-sm-9">
                         <input type="text" name="type" class="form-control" placeholder="印刷类型" required="true"

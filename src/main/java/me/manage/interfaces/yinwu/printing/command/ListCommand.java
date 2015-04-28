@@ -5,7 +5,7 @@ package me.manage.interfaces.yinwu.printing.command;
  */
 public class ListCommand {
     private String name;
-    private String ink;
+    private String isbn;
     private String type;
     private int page = 1;
     private int pageSize = 20;
@@ -18,12 +18,12 @@ public class ListCommand {
         this.name = name;
     }
 
-    public String getInk() {
-        return ink;
+    public String getIsbn() {
+        return isbn;
     }
 
-    public void setInk(String ink) {
-        this.ink = ink;
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 
     public String getType() {

@@ -43,11 +43,11 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4">
-                        <label for="ink">油墨类型:</label>
+                        <label for="isbn">ISBN:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control pull-left" id="ink" name="ink" placeholder="油墨类型"
-                               value="${printing.ink}">
+                        <input type="text" class="form-control pull-left" id="isbn" name="isbn" placeholder="ISBN"
+                               value="${printing.isbn}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -66,6 +66,7 @@
                 <tr>
                     <th>编号</th>
                     <th>印刷名称</th>
+                    <th>ISBN</th>
                     <th>印刷类型</th>
                     <th>纸张材料</th>
                     <th>纸张类型</th>
@@ -80,6 +81,7 @@
                             <tr>
                                 <td>${printing_index + 1}</td>
                                 <td>${printing.name}</td>
+                                <td>${printing.isbn}</td>
                                 <td>${printing.type}</td>
                                 <td>${printing.paper}</td>
                                 <td>${printing.paperType}</td>
@@ -97,7 +99,7 @@
                 [/#if]
             </table>
         </div>
-        [@mc.showPagination '/printing/list?name=${printing.name}&principal=${printing.type}&ink=${printing.ink}' /]
+        [@mc.showPagination '/printing/list?name=${printing.name}&principal=${printing.type}&ink=${printing.isbn}' /]
     </section>
 [/@override]
 
