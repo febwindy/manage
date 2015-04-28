@@ -15,7 +15,7 @@
         </property>
     </class>
 
-    <union-subclass name="me.manage.domain.model.verified.user.UserVerified" table="erp_verified_user"
+    <union-subclass name="me.manage.domain.model.verified.user.UserVerified" table="m_verified_user"
                     extends="me.manage.domain.model.verified.AbstractVerified">
         <property name="username" column="username" length="32" unique="true"/>
         <property name="realName" column="real_name" length="32"/>

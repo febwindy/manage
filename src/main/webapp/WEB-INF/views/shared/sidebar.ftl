@@ -11,8 +11,9 @@
             </div>
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
-        <#--<@security.authorize access="hasAnyRole('administrator')">-->
-            <ul class="sidebar-menu">
+
+        <ul class="sidebar-menu">
+            <@security.authorize access="hasAnyRole('administrator')">
                 <li class="active">
                     <a href="/index">
                         <i class="fa fa-dashboard"></i> <span>公告</span>
@@ -52,8 +53,60 @@
                         <li><a href="/permission/create"><i class="fa fa-angle-double-right"></i> 资源创建</a></li>
                     </ul>
                 </li>
-            </ul>
-        <#--</@security.authorize>-->
+            </@security.authorize>
+            <@security.authorize access="hasAnyRole('administrator,bianwuadmin')">
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-edit"></i>
+                        <span>编务管理系统</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="/editing/list"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
+                        <li><a href="/editing/create"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                    </ul>
+                </li>
+            </@security.authorize>
+            <@security.authorize access="hasAnyRole('administrator,yinwuadmin')">
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-print"></i>
+                        <span>印务管理系统</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                    </ul>
+                </li>
+            </@security.authorize>
+            <@security.authorize access="hasAnyRole('administrator,faxingadmin')">
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-truck"></i>
+                        <span>发行管理系统</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                    </ul>
+                </li>
+            </@security.authorize>
+            <@security.authorize access="hasAnyRole('administrator,caiwuadmin')">
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-money"></i>
+                        <span>财务管理系统</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                    </ul>
+                </li>
+            </@security.authorize>
+        </ul>
     </section>
     <!-- /.sidebar -->
 </aside>

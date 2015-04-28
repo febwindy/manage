@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.editing.Editing" table="m_editing" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="part" column="part"/>
+        <property name="content" column="content"/>
+        <property name="thing" column="thing"/>
+        <property name="department" column="department"/>
+        <property name="operator" column="operator"/>
+        <property name="beginDate" column="begin_date"/>
+        <property name="endDate" column="end_date"/>
+        <property name="createdDate" column="created_date"/>
+        <property name="status" column="status"/>
+        <many-to-one name="user" class="me.manage.domain.model.user.User" column="user_id"/>
+    </class>
+</hibernate-mapping>
