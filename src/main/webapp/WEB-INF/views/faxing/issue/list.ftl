@@ -8,11 +8,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            印务管理
+            发行管理
             <small>选题列表</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/designing/list"><i class="fa fa-print"></i> 印务管理</a></li>
+            <li><a href="/issue/list"><i class="fa fa-edit"></i> 发行管理</a></li>
             <li class="active">选题列表</li>
         </ol>
     </section>
@@ -22,14 +22,14 @@
 
             [@mc.showAlert /]
 
-            <form class="form-inline" action="/designing/list" method="post">
+            <form class="form-inline" action="/issue/list" method="post">
                 <div class="form-group">
                     <div class="col-sm-4">
                         <label for="part">工作环节:</label>
                     </div>
                     <div class="col-sm-8">
                         <input type="text" class="form-control pull-left" id="part" name="part" placeholder="工作环节"
-                               value="${designing.part}">
+                               value="${issue.part}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-sm-8">
                         <input type="text" class="form-control pull-left" id="principal" name="principal" placeholder="责任人"
-                               value="${designing.principal}">
+                               value="${issue.principal}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -48,7 +48,7 @@
                         </button>
                     </div>
                     <div class="col-sm-6 pull-right">
-                        <a href="/designing/create" class="btn btn-success">创建</a>
+                        <a href="/issue/create" class="btn btn-success">创建</a>
                     </div>
                 </div>
             </form>
@@ -68,28 +68,28 @@
                 </tr>
                 [#if pagination.data!]
                     [#if pagination.data?size > 0]
-                        [#list pagination.data as designing]
+                        [#list pagination.data as issue]
                             <tr>
-                                <td>${designing_index + 1}</td>
-                                <td>${designing.part}</td>
-                                <td>${designing.content}</td>
-                                <td>${designing.thing}</td>
-                                <td>${designing.department}</td>
-                                <td>${designing.principal}</td>
-                                <td>${designing.beginDate?date}</td>
-                                <td>${designing.endDate?date}</td>
-                                <td>${(designing.status.getName())!}</td>
+                                <td>${issue_index + 1}</td>
+                                <td>${issue.part}</td>
+                                <td>${issue.content}</td>
+                                <td>${issue.thing}</td>
+                                <td>${issue.department}</td>
+                                <td>${issue.principal}</td>
+                                <td>${issue.beginDate?date}</td>
+                                <td>${issue.endDate?date}</td>
+                                <td>${(issue.status.getName())!}</td>
                                 <td>
-                                    [#if designing.status??]
-                                        [#assign status=designing.status/]
+                                    [#if issue.status??]
+                                        [#assign status=issue.status/]
                                         [#if status.getValue() == 0]
-                                            <a class="btn btn-warning btn-sm" href="/designing/verified/${designing.id}?status=finished">通过</a>
-                                            <a class="btn btn-warning btn-sm" href="/designing/verified/${designing.id}?status=unfinished">驳回</a>
+                                            <a class="btn btn-warning btn-sm" href="/issue/verified/${issue.id}?status=finished">通过</a>
+                                            <a class="btn btn-warning btn-sm" href="/issue/verified/${issue.id}?status=unfinished">驳回</a>
                                         [/#if]
                                     [/#if]
-                                    <a class="btn btn-success btn-sm" href="/designing/view/${designing.id}">查看</a>
-                                    <a class="btn btn-info btn-sm" href="/designing/edit/${designing.id}">编辑</a>
-                                    <a class="btn btn-danger btn-sm" href="/designing/delete/${designing.id}">删除</a>
+                                    <a class="btn btn-success btn-sm" href="/issue/view/${issue.id}">查看</a>
+                                    <a class="btn btn-info btn-sm" href="/issue/edit/${issue.id}">编辑</a>
+                                    <a class="btn btn-danger btn-sm" href="/issue/delete/${issue.id}">删除</a>
                                 </td>
                             </tr>
                         [/#list]
@@ -97,7 +97,7 @@
                 [/#if]
             </table>
         </div>
-        [@mc.showPagination '/designing/list?part=${designing.part}&principal=${designing.principal}' /]
+        [@mc.showPagination '/issue/list?part=${issue.part}&principal=${issue.principal}' /]
     </section>
 [/@override]
 

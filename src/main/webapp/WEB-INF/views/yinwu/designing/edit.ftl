@@ -12,7 +12,7 @@
             <small>选题修改</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/designing/list"><i class="fa fa-edit"></i> 印务管理</a></li>
+            <li><a href="/designing/list"><i class="fa fa-print"></i> 印务管理</a></li>
             <li class="active">选题修改</li>
         </ol>
     </section>
