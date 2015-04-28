@@ -96,7 +96,7 @@
                 <div class="form-group">
                     <div class="col-sm-6">
                         <div class="col-sm-offset-8 col-sm-4">
-                            <button type="submit" class="btn btn-block bg-olive">创建</button>
+                            <a href="/editing/create" class="btn btn-block bg-olive">创建</a>
                         </div>
                     </div>
                     <div class="col-sm-6">

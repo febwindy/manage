@@ -87,6 +87,7 @@ public class ContactService implements IContactService {
         contact.setDiscount(command.getDiscount());
         contact.setType(command.getType());
         contact.setRemark(command.getRemark());
+        contact.setCreatedDate(new Date());
 
         contactRepository.save(contact);
     }
