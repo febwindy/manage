@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.faxing.customer.Customer" table="m_customer" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="name" column="name"/>
+        <property name="contact" column="contact"/>
+        <property name="tel" column="tel"/>
+        <property name="deliveryStyle" column="delivery_style"/>
+        <property name="deliveryDate" column="delivery_date"/>
+        <property name="deliveryAddress" column="delivery_address"/>
+        <property name="type" column="type"/>
+        <property name="remark" column="remark"/>
+        <property name="createdDate" column="created_date"/>
+    </class>
+</hibernate-mapping>
