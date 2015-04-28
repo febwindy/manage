@@ -76,8 +76,9 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 印刷管理</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 装订管理</a></li>
                     </ul>
                 </li>
             </@security.authorize>

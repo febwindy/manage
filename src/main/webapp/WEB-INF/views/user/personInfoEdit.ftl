@@ -35,7 +35,7 @@
                 <div class="form-group">
                     <label for="username" class="col-sm-2 control-label">用户名:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="username" class="form-control" placeholder="用户名" required="true"
+                        <input type="text" name="username" class="form-control" placeholder="用户名" required="true" readonly
                                value="${user.username}"/>
                         [@spring.showErrors "username"/]
                     </div>
