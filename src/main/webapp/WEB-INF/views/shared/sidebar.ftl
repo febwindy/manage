@@ -85,7 +85,7 @@
             <@security.authorize access="hasAnyRole('administrator,faxingadmin')">
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-truck"></i>
+                        <i class="fa fa-tasks"></i>
                         <span>发行管理系统</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>

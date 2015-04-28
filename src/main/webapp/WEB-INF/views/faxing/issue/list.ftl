@@ -12,7 +12,7 @@
             <small>选题列表</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/issue/list"><i class="fa fa-edit"></i> 发行管理</a></li>
+            <li><a href="/issue/list"><i class="fa fa-tasks"></i> 发行管理</a></li>
             <li class="active">选题列表</li>
         </ol>
     </section>
