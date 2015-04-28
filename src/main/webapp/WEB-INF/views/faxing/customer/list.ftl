@@ -24,10 +24,10 @@
 
             <form class="form-inline" action="/customer/list" method="post">
                 <div class="form-group">
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <label for="name">商户与能力名称:</label>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <input type="text" class="form-control pull-left" id="name" name="name" placeholder="商户与能力名称"
                                value="${customer.name}">
                     </div>

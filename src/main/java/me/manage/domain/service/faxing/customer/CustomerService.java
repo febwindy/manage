@@ -1,6 +1,7 @@
 package me.manage.domain.service.faxing.customer;
 
 import me.manage.domain.model.faxing.customer.Customer;
+import me.manage.domain.model.faxing.customer.CustomerType;
 import me.manage.domain.model.faxing.customer.ICustomerRepository;
 import me.manage.infrastructure.persistence.hibernate.generic.Pagination;
 import me.manage.interfaces.faxing.customer.command.CreateCustomerCommand;
@@ -39,6 +40,11 @@ public class CustomerService implements ICustomerService {
     @Override
     public Customer findById(String id) {
         return customerRepository.getById(id);
+    }
+
+    @Override
+    public List<Customer> findByType(CustomerType type) {
+        return customerRepository.findByType(type);
     }
 
     @Override

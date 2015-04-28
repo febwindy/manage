@@ -1,6 +1,7 @@
 package me.manage.interfaces.faxing.customer;
 
 import me.manage.domain.model.faxing.customer.Customer;
+import me.manage.domain.model.faxing.customer.CustomerType;
 import me.manage.domain.service.faxing.customer.ICustomerService;
 import me.manage.infrastructure.persistence.hibernate.generic.Pagination;
 import me.manage.interfaces.faxing.customer.command.CreateCustomerCommand;
@@ -10,13 +11,11 @@ import me.manage.interfaces.shared.web.AlertMessage;
 import me.manage.interfaces.shared.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -91,6 +90,12 @@ public class CustomerController extends BaseController {
         redirectAttributes.addFlashAttribute(AlertMessage.MODEL_ATTRIBUTE_KEY, alertMessage);
 
         return new ModelAndView("redirect:/customer/list");
+    }
+
+    @RequestMapping(value = "/get_by_type")
+    @ResponseBody
+    public List<Customer> tmpAllByType(CustomerType type) throws Exception {
+        return customerService.findByType(type);
     }
 
 }

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.faxing.business.ProcurementAndSales" table="m_procurement_sales" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="productId" column="product_id"/>
+        <property name="productName" column="product_name"/>
+        <property name="productStyle" column="product_style"/>
+        <property name="unit" column="unit"/>
+        <property name="num" column="num"/>
+        <property name="price" column="price"/>
+        <property name="discount" column="discount"/>
+        <property name="taxRate" column="tax_rate"/>
+        <property name="amountOfTax" column="amount_of_tax"/>
+        <property name="type" column="type"/>
+        <property name="amount" column="amount"/>
+        <property name="createdDate" column="created_date"/>
+        <many-to-one name="customer" column="customer_id" class="me.manage.domain.model.faxing.customer.Customer"/>
+        <property name="remark" column="remark"/>
+    </class>
+</hibernate-mapping>

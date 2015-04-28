@@ -91,8 +91,8 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="/issue/list"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
-                        <li><a href="/customer/list"><i class="fa fa-angle-double-right"></i> 商户与能力</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 采购销售</a></li>
+                        <li><a href="/business/list"><i class="fa fa-angle-double-right"></i> 采购销售管理</a></li>
+                        <li><a href="/customer/list"><i class="fa fa-angle-double-right"></i> 商户与能力管理</a></li>
                     </ul>
                 </li>
             </@security.authorize>
