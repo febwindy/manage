@@ -78,7 +78,7 @@
                     <ul class="treeview-menu">
                         <li><a href="/designing/list"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
                         <li><a href="/printing/list"><i class="fa fa-angle-double-right"></i> 印刷管理</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 装订管理</a></li>
+                        <li><a href="/bookbinding/list"><i class="fa fa-angle-double-right"></i> 装订管理</a></li>
                     </ul>
                 </li>
             </@security.authorize>

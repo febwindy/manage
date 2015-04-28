@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.yinwu.bookbinding.Bookbinding" table="m_bookbinding" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="name" column="name"/>
+        <property name="material" column="material"/>
+        <property name="form" column="form"/>
+        <property name="style" column="style"/>
+        <property name="flow" column="flow"/>
+        <property name="remark" column="remark"/>
+        <property name="createdDate" column="created_date"/>
+    </class>
+</hibernate-mapping>
