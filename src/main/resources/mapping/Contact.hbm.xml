@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.bianwu.contact.Contact" table="m_editing" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="contactId" column="contact_id"/>
+        <property name="page" column="page"/>
+        <property name="author" column="author"/>
+        <property name="manuscriptOutDate" column="manuscript_out_date"/>
+        <property name="address" column="address"/>
+        <property name="discount" column="discount"/>
+        <property name="type" column="type"/>
+        <property name="createdDate" column="created_date"/>
+        <property name="remark" column="remark"/>
+    </class>
+</hibernate-mapping>
