@@ -62,8 +62,9 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="/editing/list"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
-                        <li><a href="/editing/create"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                        <li><a href="/editing/list"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
+                        <li><a href="/paper/list"><i class="fa fa-angle-double-right"></i> 发稿管理</a></li>
+                        <li><a href="/contact/list"><i class="fa fa-angle-double-right"></i> 合同管理</a></li>
                     </ul>
                 </li>
             </@security.authorize>

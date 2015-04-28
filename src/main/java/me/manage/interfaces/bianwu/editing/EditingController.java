@@ -1,11 +1,11 @@
-package me.manage.interfaces.editing;
+package me.manage.interfaces.bianwu.editing;
 
-import me.manage.domain.model.editing.Editing;
-import me.manage.domain.service.editing.IEditingService;
+import me.manage.domain.model.bianwu.editing.Editing;
+import me.manage.domain.service.bianwu.editing.IEditingService;
 import me.manage.infrastructure.persistence.hibernate.generic.Pagination;
-import me.manage.interfaces.editing.command.CreateEditingCommand;
-import me.manage.interfaces.editing.command.EditEditingCommand;
-import me.manage.interfaces.editing.command.ListCommand;
+import me.manage.interfaces.bianwu.editing.command.CreateEditingCommand;
+import me.manage.interfaces.bianwu.editing.command.EditEditingCommand;
+import me.manage.interfaces.bianwu.editing.command.ListCommand;
 import me.manage.interfaces.shared.web.AlertMessage;
 import me.manage.interfaces.shared.web.BaseController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,13 +32,13 @@ public class EditingController extends BaseController {
     @RequestMapping("/list")
     public ModelAndView list(@ModelAttribute("editing")ListCommand command) throws Exception {
         Pagination<Editing> pagination = editingService.pagination(command);
-        return new ModelAndView("/editing/list", "pagination", pagination)
+        return new ModelAndView("/bianwu/editing/list", "pagination", pagination)
                 .addObject("editing", command);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public ModelAndView create(@ModelAttribute("editing")CreateEditingCommand command) throws Exception {
-        return new ModelAndView("/editing/create", "editing", command);
+        return new ModelAndView("/bianwu/editing/create", "editing", command);
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
@@ -58,7 +58,7 @@ public class EditingController extends BaseController {
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
     public ModelAndView create(@PathVariable String id) throws Exception {
         Editing editing = editingService.findById(id);
-        return new ModelAndView("/editing/edit", "editing", editing);
+        return new ModelAndView("/bianwu/editing/edit", "editing", editing);
     }
 
     @RequestMapping(value = "/edit/{id}", method = RequestMethod.POST)
@@ -78,7 +78,7 @@ public class EditingController extends BaseController {
     @RequestMapping(value = "/view/{id}")
     public ModelAndView view(@PathVariable String id) throws Exception {
         Editing editing = editingService.findById(id);
-        return new ModelAndView("/editing/view", "editing", editing);
+        return new ModelAndView("/bianwu/editing/view", "editing", editing);
     }
 
     @RequestMapping(value = "/delete/{id}")

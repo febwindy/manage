@@ -42,10 +42,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-3">
+                    <div class="col-sm-6">
                         <button type="submit" class="btn btn-success">
                             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>查询
                         </button>
+                    </div>
+                    <div class="col-sm-6 pull-right">
+                        <a href="/editing/create" class="btn btn-success">创建</a>
                     </div>
                 </div>
             </form>

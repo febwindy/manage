@@ -1,4 +1,4 @@
-package me.manage.domain.model.editing;
+package me.manage.domain.model.bianwu.editing;
 
 /**
  * Created by savion on 2015/4/28.

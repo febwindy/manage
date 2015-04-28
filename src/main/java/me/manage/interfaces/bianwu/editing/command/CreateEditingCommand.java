@@ -1,4 +1,4 @@
-package me.manage.interfaces.editing.command;
+package me.manage.interfaces.bianwu.editing.command;
 
 /**
  * Created by savion on 2015/4/28.

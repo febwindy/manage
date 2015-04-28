@@ -1,9 +1,13 @@
-package me.manage.interfaces.editing.command;
+package me.manage.domain.model.bianwu.editing;
+
+import me.manage.domain.model.user.User;
+
+import java.util.Date;
 
 /**
  * Created by savion on 2015/4/28.
  */
-public class EditEditingCommand {
+public class Editing {
 
     private String id;
     private String part;
@@ -11,9 +15,11 @@ public class EditEditingCommand {
     private String thing;
     private String department;
     private String operator;
-    private String beginDate;
-    private String endDate;
-    private String createdDate;
+    private Date beginDate;
+    private Date endDate;
+    private Date createdDate;
+    private EditingStatus status;
+    private User user;
     private String remark;
 
     public String getId() {
@@ -64,28 +70,44 @@ public class EditEditingCommand {
         this.operator = operator;
     }
 
-    public String getBeginDate() {
+    public Date getBeginDate() {
         return beginDate;
     }
 
-    public void setBeginDate(String beginDate) {
+    public void setBeginDate(Date beginDate) {
         this.beginDate = beginDate;
     }
 
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(String endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
-    public String getCreatedDate() {
+    public Date getCreatedDate() {
         return createdDate;
     }
 
-    public void setCreatedDate(String createdDate) {
+    public void setCreatedDate(Date createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public EditingStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(EditingStatus status) {
+        this.status = status;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getRemark() {

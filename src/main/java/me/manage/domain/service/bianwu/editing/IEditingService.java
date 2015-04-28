@@ -1,10 +1,10 @@
-package me.manage.domain.service.editing;
+package me.manage.domain.service.bianwu.editing;
 
-import me.manage.domain.model.editing.Editing;
+import me.manage.domain.model.bianwu.editing.Editing;
 import me.manage.infrastructure.persistence.hibernate.generic.Pagination;
-import me.manage.interfaces.editing.command.CreateEditingCommand;
-import me.manage.interfaces.editing.command.EditEditingCommand;
-import me.manage.interfaces.editing.command.ListCommand;
+import me.manage.interfaces.bianwu.editing.command.CreateEditingCommand;
+import me.manage.interfaces.bianwu.editing.command.EditEditingCommand;
+import me.manage.interfaces.bianwu.editing.command.ListCommand;
 
 /**
  * Created by savion on 2015/4/28.

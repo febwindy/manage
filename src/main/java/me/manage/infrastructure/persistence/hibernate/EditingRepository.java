@@ -1,7 +1,7 @@
 package me.manage.infrastructure.persistence.hibernate;
 
-import me.manage.domain.model.editing.Editing;
-import me.manage.domain.model.editing.IEditingRepository;
+import me.manage.domain.model.bianwu.editing.Editing;
+import me.manage.domain.model.bianwu.editing.IEditingRepository;
 import me.manage.infrastructure.persistence.hibernate.generic.AbstractHibernateGenericRepository;
 import org.hibernate.Criteria;
 import org.hibernate.FetchMode;

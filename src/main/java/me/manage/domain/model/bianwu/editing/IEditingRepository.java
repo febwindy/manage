@@ -1,4 +1,4 @@
-package me.manage.domain.model.editing;
+package me.manage.domain.model.bianwu.editing;
 
 import me.manage.infrastructure.persistence.hibernate.generic.IHibernateGenericRepository;
 
