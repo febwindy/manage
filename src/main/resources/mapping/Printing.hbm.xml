@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.yinwu.printing.Printing" table="m_printing" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="name" column="name"/>
+        <property name="type" column="type"/>
+        <property name="paper" column="paper"/>
+        <property name="paperType" column="paper_type"/>
+        <property name="ink" column="ink"/>
+        <property name="wrapper" column="wrapper"/>
+        <property name="printNumber" column="print_date"/>
+        <property name="remark" column="remark"/>
+        <property name="createdDate" column="created_date"/>
+    </class>
+</hibernate-mapping>

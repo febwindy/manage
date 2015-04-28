@@ -11,7 +11,6 @@ import me.manage.interfaces.yinwu.designing.command.ListCommand;
  */
 public interface IDesigningService {
 
-
     Designing findById(String id);
 
     Pagination<Designing> pagination(ListCommand command);
