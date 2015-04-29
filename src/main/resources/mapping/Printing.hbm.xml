@@ -16,7 +16,7 @@
         <property name="paperType" column="paper_type"/>
         <property name="ink" column="ink"/>
         <property name="wrapper" column="wrapper"/>
-        <property name="printNumber" column="print_date"/>
+        <property name="printNumber" column="print_number"/>
         <property name="remark" column="remark"/>
         <property name="createdDate" column="created_date"/>
     </class>

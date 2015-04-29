@@ -59,14 +59,14 @@
                     <th>产品编号</th>
                     <th>产品名称</th>
                     <th>产品规格</th>
-                    <th>单位</th>
-                    <th>数量</th>
-                    <th>单价</th>
-                    <th>折扣率</th>
-                    <th>税率</th>
-                    <th>税额</th>
+                    [#--<th>单位</th>--]
+                    [#--<th>数量</th>--]
+                    [#--<th>单价</th>--]
+                    [#--<th>折扣率</th>--]
+                    [#--<th>税率</th>--]
+                    [#--<th>税额</th>--]
                     <th>类型</th>
-                    <th>金额</th>
+                    [#--<th>金额</th>--]
                     <th>操作</th>
                 </tr>
                 [#if pagination.data!]
@@ -77,14 +77,14 @@
                                 <td>${data.productId}</td>
                                 <td>${data.productName}</td>
                                 <td>${data.productStyle}</td>
-                                <td>${data.unit}</td>
-                                <td>${data.num}</td>
-                                <td>${data.price}</td>
-                                <td>${data.discount}</td>
-                                <td>${data.taxRate}</td>
-                                <td>${data.amountOfTax}</td>
+                                [#--<td>${data.unit}</td>--]
+                                [#--<td>${data.num}</td>--]
+                                [#--<td>${data.price}</td>--]
+                                [#--<td>${data.discount}</td>--]
+                                [#--<td>${data.taxRate}</td>--]
+                                [#--<td>${data.amountOfTax}</td>--]
                                 <td>${(data.type.getName())!}</td>
-                                <td>${data.amount}</td>
+                                [#--<td>${data.amount}</td>--]
                                 <td>
                                     <a class="btn btn-success btn-sm" href="/business/view/${data.id}">查看</a>
                                     <a class="btn btn-info btn-sm" href="/business/edit/${data.id}">编辑</a>
