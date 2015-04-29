@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="me.manage.domain.model.bianwu.contact.Contact" table="m_contact" lazy="true">
+    <class name="me.manage.domain.model.bianwu.contact.Contact" table="m_contract" lazy="true">
         <id name="id" column="id" length="32">
              <generator class="uuid"/>
         </id>

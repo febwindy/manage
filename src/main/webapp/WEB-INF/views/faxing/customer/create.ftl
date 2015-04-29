@@ -38,9 +38,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="tel" class="col-sm-2 control-label">联第电话:</label>
+                    <label for="tel" class="col-sm-2 control-label">联系电话:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="tel" class="form-control" placeholder="联第电话" required="true"
+                        <input type="text" name="tel" class="form-control" placeholder="联系电话" required="true"
                                value="${customer.tel}"/>
                     </div>
                 </div>
