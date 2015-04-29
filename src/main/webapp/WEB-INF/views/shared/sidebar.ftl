@@ -99,13 +99,14 @@
             <@security.authorize access="hasAnyRole('administrator,caiwuadmin')">
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-money"></i>
-                        <span>财务管理系统</span>
+                        <i class="fa fa-truck"></i>
+                        <span>物流管理系统</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题列表</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 选题创建</a></li>
+                        <li><a href="/logistics/list"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 图书入库</a></li>
+                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 图书出库</a></li>
                     </ul>
                 </li>
             </@security.authorize>
