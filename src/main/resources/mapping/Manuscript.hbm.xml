@@ -12,7 +12,7 @@
         <property name="name" column="name"/>
         <property name="author" column="author"/>
         <property name="count" column="count"/>
-        <property name="page" column="discount"/>
+        <property name="page" column="page"/>
         <property name="address" column="address"/>
         <property name="opinion" column="opinion"/>
         <property name="editor" column="editor"/>
