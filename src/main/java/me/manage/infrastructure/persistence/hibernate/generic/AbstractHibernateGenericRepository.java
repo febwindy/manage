@@ -66,41 +66,6 @@ public abstract class AbstractHibernateGenericRepository<T, ID extends Serializa
         return (T) getSession().get(getPersistentClass(), id);
     }
 
-//    @Override
-//    @SuppressWarnings("unchecked")
-//    public List<T> findByExample(T exampleInstance, String... excludeProperty) {
-//        Criteria criteria = getSession().createCriteria(getPersistentClass());
-//        Example example = Example.create(exampleInstance);
-//        for (String exclude : excludeProperty) {
-//            example.excludeProperty(exclude);
-//        }
-//        criteria.add(example);
-//        return criteria.list();
-//    }
-//
-//
-//
-//    @Override
-//    @SuppressWarnings("unchecked")
-//    public T findByProperties(Map<String, Object> propertyMap) {
-//        Criteria criteria = getSession().createCriteria(getPersistentClass());
-//        for (Map.Entry<String, Object> entry : propertyMap.entrySet()) {
-//            criteria.add(Restrictions.eq(entry.getKey(), entry.getValue()));
-//        }
-//
-//        Object result = criteria.uniqueResult();
-//        return null == result ? null : (T)result;
-//    }
-//
-//    @Override
-//    public List<T> findAllByProperties(Map<String, Object> propertyMap) {
-//        Criteria criteria = getSession().createCriteria(getPersistentClass());
-//        for (Map.Entry<String, Object> entry : propertyMap.entrySet()) {
-//            criteria.add(Restrictions.eq(entry.getKey(), entry.getValue()));
-//        }
-//        return criteria.list();
-//    }
-
     @Override
     public void flush() {
         getSession().flush();

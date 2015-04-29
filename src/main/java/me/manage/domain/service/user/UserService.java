@@ -73,10 +73,6 @@ public class UserService implements IUserService{
             sex = true;
         }
 
-//        Set<Role> roles = new HashSet<Role>();
-//        Role role = roleRepository.getByName("user");
-//        roles.add(role);
-
         User user = new User();
         user.setUsername(command.getUsername());
         user.setRealName(command.getRealName());

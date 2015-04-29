@@ -112,7 +112,7 @@
                 </form>
 
                 <div class="margin text-center">
-                    <span>ERP管理系统</span>
+                    <span>XX出版集团管理系统</span>
                     <br/>
                 </div>
             </div>
