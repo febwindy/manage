@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="me.manage.domain.model.wuliu.delivery.Delivery" table="m_delivery" lazy="true">
+        <id name="id" column="id" length="32">
+             <generator class="uuid"/>
+        </id>
+
+        <property name="deliveryId" column="delivery_id"/>
+        <property name="supplier" column="supplier"/>
+        <property name="style" column="style"/>
+        <property name="deliveryDate" column="delivery_date"/>
+
+        <property name="productId" column="product_id"/>
+        <property name="productName" column="product_name"/>
+        <property name="productType" column="product_type"/>
+        <property name="isbn" column="isbn"/>
+        <property name="author" column="author"/>
+        <property name="press" column="press"/>
+        <property name="storeAddress" column="store_address"/>
+        <property name="num" column="num"/>
+        <property name="price" column="price"/>
+        <property name="totalAmount" column="total_amount"/>
+        <property name="principal" column="principal"/>
+
+        <property name="remark" column="remark"/>
+        <property name="createdDate" column="created_date"/>
+    </class>
+</hibernate-mapping>

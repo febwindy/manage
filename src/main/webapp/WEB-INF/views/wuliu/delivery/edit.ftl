@@ -1,4 +1,4 @@
-[@override name="title"]图书入库创建[/@override]
+[@override name="title"]图书出库修改[/@override]
 
 [@override name="topResources"]
     [@super /]
@@ -9,23 +9,23 @@
     <section class="content-header">
         <h1>
             物流管理
-            <small>图书入库创建</small>
+            <small>图书出库修改</small>
         </h1>
         <ol class="breadcrumb">
-            <li><a href="/warehousing/list"><i class="fa fa-truck"></i> 物流管理</a></li>
-            <li class="active">图书入库创建</li>
+            <li><a href="/delivery/list"><i class="fa fa-truck"></i> 物流管理</a></li>
+            <li class="active">图书出库修改</li>
         </ol>
     </section>
 
     <section class="container content">
         <div class="row">
-            <form role="form" class="form-horizontal" action="/warehousing/create" method="post">
+            <form role="form" class="form-horizontal" action="/delivery/edit/${delivery.id}" method="post">
 
                 <div class="form-group">
-                    <label for="warehousingId" class="col-sm-2 control-label">入库编号:</label>
+                    <label for="deliveryId" class="col-sm-2 control-label">出库编号:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="warehousingId" class="form-control" placeholder="入库编号" required="true"
-                               value="${warehousing.warehousingId}"/>
+                        <input type="text" name="deliveryId" class="form-control" placeholder="出库编号" required="true"
+                               value="${delivery.deliveryId}"/>
                     </div>
                 </div>
 
@@ -33,23 +33,23 @@
                     <label for="supplier" class="col-sm-2 control-label">供应商:</label>
                     <div class="col-sm-9">
                         <input type="text" name="supplier" class="form-control" placeholder="供应商" required="true"
-                               value="${warehousing.supplier}"/>
+                               value="${delivery.supplier}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="style" class="col-sm-2 control-label">入库方式:</label>
+                    <label for="style" class="col-sm-2 control-label">出库方式:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="style" class="form-control" placeholder="入库方式" required="true"
-                               value="${warehousing.style}"/>
+                        <input type="text" name="style" class="form-control" placeholder="出库方式" required="true"
+                               value="${delivery.style}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="warehousingDate" class="col-sm-2 control-label">入库日期:</label>
+                    <label for="deliveryDate" class="col-sm-2 control-label">出库日期:</label>
                     <div class="col-sm-9">
-                        <input type="date" name="warehousingDate" class="form-control" placeholder="入库日期" required="true"
-                               value="${warehousing.warehousingDate}"/>
+                        <input type="date" name="deliveryDate" class="form-control" placeholder="出库日期" required="true"
+                               value="${delivery.deliveryDate?date}"/>
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@
                     <label for="productId" class="col-sm-2 control-label">图书编号:</label>
                     <div class="col-sm-9">
                         <input type="text" name="productId" class="form-control" placeholder="图书编号" required="true"
-                               value="${warehousing.productId}"/>
+                               value="${delivery.productId}"/>
                     </div>
                 </div>
 
@@ -65,7 +65,7 @@
                     <label for="productName" class="col-sm-2 control-label">图书名称:</label>
                     <div class="col-sm-9">
                         <input type="text" name="productName" class="form-control" placeholder="图书名称" required="true"
-                               value="${warehousing.productName}"/>
+                               value="${delivery.productName}"/>
                     </div>
                 </div>
 
@@ -73,7 +73,7 @@
                     <label for="productType" class="col-sm-2 control-label">图书类型:</label>
                     <div class="col-sm-9">
                         <input type="text" name="productType" class="form-control" placeholder="图书类型" required="true"
-                               value="${warehousing.productType}"/>
+                               value="${delivery.productType}"/>
                     </div>
                 </div>
 
@@ -81,7 +81,7 @@
                     <label for="isbn" class="col-sm-2 control-label">ISBN:</label>
                     <div class="col-sm-9">
                         <input type="text" name="isbn" class="form-control" placeholder="ISBN" required="true"
-                               value="${warehousing.isbn}"/>
+                               value="${delivery.isbn}"/>
                     </div>
                 </div>
 
@@ -89,7 +89,7 @@
                     <label for="author" class="col-sm-2 control-label">作者:</label>
                     <div class="col-sm-9">
                         <input type="text" name="author" class="form-control" placeholder="作者" required="true"
-                               value="${warehousing.author}"/>
+                               value="${delivery.author}"/>
                     </div>
                 </div>
 
@@ -97,39 +97,39 @@
                     <label for="press" class="col-sm-2 control-label">出版社:</label>
                     <div class="col-sm-9">
                         <input type="text" name="press" class="form-control" placeholder="出版社" required="true"
-                               value="${warehousing.press}"/>
+                               value="${delivery.press}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="storeAddress" class="col-sm-2 control-label">存放地址:</label>
+                    <label for="storeAddress" class="col-sm-2 control-label">出库地址:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="storeAddress" class="form-control" placeholder="存放地址" required="true"
-                               value="${warehousing.storeAddress}"/>
+                        <input type="text" name="storeAddress" class="form-control" placeholder="出库地址" required="true"
+                               value="${delivery.storeAddress}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="num" class="col-sm-2 control-label">入库数量:</label>
+                    <label for="num" class="col-sm-2 control-label">出库数量:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="num" class="form-control" placeholder="入库数量" required="true"
-                               value="${warehousing.num}"/>
+                        <input type="text" name="num" class="form-control" placeholder="出库数量" required="true"
+                               value="${delivery.num}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="price" class="col-sm-2 control-label">入库价格:</label>
+                    <label for="price" class="col-sm-2 control-label">出库价格:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="price" class="form-control" placeholder="入库价格" required="true"
-                               value="${warehousing.price}"/>
+                        <input type="text" name="price" class="form-control" placeholder="出库价格" required="true"
+                               value="${delivery.price}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="totalAmount" class="col-sm-2 control-label">入库总额:</label>
+                    <label for="totalAmount" class="col-sm-2 control-label">出库总额:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="totalAmount" class="form-control" placeholder="入库总额" required="true"
-                               value="${warehousing.totalAmount}"/>
+                        <input type="text" name="totalAmount" class="form-control" placeholder="出库总额" required="true"
+                               value="${delivery.totalAmount}"/>
                     </div>
                 </div>
 
@@ -137,26 +137,26 @@
                     <label for="principal" class="col-sm-2 control-label">经办人:</label>
                     <div class="col-sm-9">
                         <input type="text" name="principal" class="form-control" placeholder="经办人" required="true"
-                               value="${warehousing.principal}"/>
+                               value="${delivery.principal}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="remark" class="col-sm-2 control-label">备注:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="remark" class="form-control" placeholder="备注" value="${warehousing.remark}"/>
+                        <input type="text" name="remark" class="form-control" placeholder="备注" value="${delivery.remark}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-6">
                         <div class="col-sm-offset-8 col-sm-4">
-                            <button type="submit" class="btn btn-block bg-olive">创建</button>
+                            <button type="submit" class="btn btn-block bg-olive">编辑</button>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="col-sm-4">
-                            <a href="/warehousing/list" class="btn btn-block btn-danger">返回</a>
+                            <a href="/delivery/list" class="btn btn-block btn-danger">返回</a>
                         </div>
                     </div>
                 </div>

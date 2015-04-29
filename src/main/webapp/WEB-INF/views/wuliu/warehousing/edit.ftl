@@ -54,25 +54,25 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="productId" class="col-sm-2 control-label">商品编号:</label>
+                    <label for="productId" class="col-sm-2 control-label">图书编号:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="productId" class="form-control" placeholder="商品编号" required="true"
+                        <input type="text" name="productId" class="form-control" placeholder="图书编号" required="true"
                                value="${warehousing.productId}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="productName" class="col-sm-2 control-label">商品名称:</label>
+                    <label for="productName" class="col-sm-2 control-label">图书名称:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="productName" class="form-control" placeholder="商品名称" required="true"
+                        <input type="text" name="productName" class="form-control" placeholder="图书名称" required="true"
                                value="${warehousing.productName}"/>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="productType" class="col-sm-2 control-label">商品类型:</label>
+                    <label for="productType" class="col-sm-2 control-label">图书类型:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="productType" class="form-control" placeholder="商品类型" required="true"
+                        <input type="text" name="productType" class="form-control" placeholder="图书类型" required="true"
                                value="${warehousing.productType}"/>
                     </div>
                 </div>
@@ -102,9 +102,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="storeAddress" class="col-sm-2 control-label">存放地置:</label>
+                    <label for="storeAddress" class="col-sm-2 control-label">存放地址:</label>
                     <div class="col-sm-9">
-                        <input type="text" name="storeAddress" class="form-control" placeholder="存放地置" required="true"
+                        <input type="text" name="storeAddress" class="form-control" placeholder="存放地址" required="true"
                                value="${warehousing.storeAddress}"/>
                     </div>
                 </div>

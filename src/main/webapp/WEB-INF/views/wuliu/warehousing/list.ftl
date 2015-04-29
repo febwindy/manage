@@ -43,10 +43,10 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-4">
-                        <label for="productName">商品名称:</label>
+                        <label for="productName">图书名称:</label>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control pull-left" id="productName" name="productName" placeholder="商品名称"
+                        <input type="text" class="form-control pull-left" id="productName" name="productName" placeholder="图书名称"
                                value="${warehousing.productName}">
                     </div>
                 </div>
@@ -69,13 +69,13 @@
                     <th>供应商</th>
                     [#--<th>入库方式</th>--]
                     [#--<th>入库日期</th>--]
-                    <th>商品编号</th>
-                    <th>商品名称</th>
-                    <th>商品类型</th>
+                    <th>图书编号</th>
+                    <th>图书名称</th>
+                    <th>图书类型</th>
                     <th>ISBN</th>
                     <th>作者</th>
                     <th>出版社</th>
-                    <th>存放地置</th>
+                    <th>存放地址</th>
                     [#--<th>入库数量</th>--]
                     [#--<th>入库价格</th>--]
                     [#--<th>入库总额</th>--]

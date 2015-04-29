@@ -106,7 +106,7 @@
                     <ul class="treeview-menu">
                         <li><a href="/logistics/list"><i class="fa fa-angle-double-right"></i> 选题管理</a></li>
                         <li><a href="/warehousing/list"><i class="fa fa-angle-double-right"></i> 图书入库</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> 图书出库</a></li>
+                        <li><a href="/delivery/list"><i class="fa fa-angle-double-right"></i> 图书出库</a></li>
                     </ul>
                 </li>
             </@security.authorize>
