@@ -9,7 +9,7 @@
              <generator class="uuid"/>
         </id>
 
-        <property name="contactId" column="contact_id"/>
+        <property name="contactId" column="contract_id"/>
         <property name="page" column="page"/>
         <property name="author" column="author"/>
         <property name="manuscriptOutDate" column="manuscript_out_date"/>
